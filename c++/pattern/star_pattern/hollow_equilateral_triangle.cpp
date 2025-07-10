@@ -6,25 +6,17 @@ int main(){
     cout<<"Enter your size= ";
     cin>>n;
     for(i=0;i<n;i++){
-    for(j=(n-i-1);j>0;j--){
-        cout<<" ";
-    }
-    for(k=0;k<=i;k++){
-        if(k==0||i==n-1){
-            cout<<"*";
+        for(j=0;j<n-i-1;j++){
+          cout<<" ";
         }
-        else{
-            cout<<" ";
-        }
-    }
-    for(k=0;k<i;k++){
-        if(k==i-1||i==n-1){
-        cout<<"*";
-        }
-        else{
-            cout<<" ";
-        }
-    }
+        for(k=0;k<2*i+1;k++){
+           if(k==0||i==n-1||k==2*i){
+              cout<<"*";
+             }
+           else{
+              cout<<" ";
+             }
+       }
     cout<<"\n";
     }
     return 0;
